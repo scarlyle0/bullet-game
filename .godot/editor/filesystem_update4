@@ -1,12 +1,8 @@
 res://main.tscn
-res://player.tscn
-res://projectile.tscn
-res://entity_base.tscn
-res://entity_base.gd
-res://enemy/enemy_base.tscn
-res://projectile/projectile.tscn
-res://player/player.gd
-res://player/player2.tscn
-res://player/player_2.gd
 res://player/player.tscn
+res://projectile/projectile.tscn
+res://enemy/enemy_base.tscn
 res://entity_base/entity_base.tscn
+res://entity_base/entity_base.gd
+res://player/player.gd
+res://entity/entity_base.gd

@@ -1,4 +1,4 @@
-extends "res://entity_base/entity_base.gd"
+extends "res://entity/entity_base.gd"
 
 var BULLET = preload("res://projectile/projectile.tscn")
 
