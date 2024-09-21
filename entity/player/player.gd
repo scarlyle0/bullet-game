@@ -29,19 +29,19 @@ func shoot(bullet_direction : Vector2):
 	attackTimer.start()
 
 func move_control(delta):
-	var velocity: Vector2 = Vector2.ZERO
+	var input_velocity: Vector2 = Vector2.ZERO
 
 	# Check for WASD input
 	if Input.is_action_pressed("right"):  # Right (D key)
-		velocity.x += 1
+		input_velocity.x += 1
 	if Input.is_action_pressed("left"):   # Left (A key)
-		velocity.x -= 1
+		input_velocity.x -= 1
 	if Input.is_action_pressed("down"):   # Down (S key)
-		velocity.y += 1
+		input_velocity.y += 1
 	if Input.is_action_pressed("up"):     # Up (W key)
-		velocity.y -= 1
+		input_velocity.y -= 1
 
 	# Normalize the velocity to prevent faster diagonal movement
-	if velocity != Vector2.ZERO:
-		velocity = velocity.normalized() * speed
-		position += velocity * delta  # Move the entity
+	if input_velocity != Vector2.ZERO:
+		input_velocity = input_velocity.normalized() * speed
+		position += input_velocity * delta  # Move the entity

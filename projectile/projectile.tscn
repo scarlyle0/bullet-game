@@ -7,6 +7,7 @@
 radius = 16.0
 
 [node name="projectile" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g8jdf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

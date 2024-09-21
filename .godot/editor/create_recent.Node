@@ -1,9 +1,9 @@
+CollisionShape2D
+Area2D
 Timer
 AnimationPlayer
-CollisionShape2D
 Sprite2D
 CharacterBody2D
 VisibleOnScreenNotifier2D
-Area2D
 AnimatedSprite2D
 Node

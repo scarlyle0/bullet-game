@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 @onready var sprite = $Sprite2D
 @onready var collShape = $CollisionShape2D
+@onready var hurtbox = $hurtbox
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +17,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	move()
 
 func move():
@@ -24,3 +25,13 @@ func move():
 
 func death():
 	queue_free()
+
+func recieve_damage(base_damage: int):
+	var full_damage = base_damage
+	full_damage -= defense
+	
+	self.hp -= full_damage
+	print(name + " recieved " + str(full_damage) + " damage")
+	
+func _on_hurtbox_area_entered(hitbox):
+	recieve_damage(hitbox.damage)

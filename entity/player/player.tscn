@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf6jj0yyrnw3g"]
+[gd_scene load_steps=6 format=3 uid="uid://cf6jj0yyrnw3g"]
 
 [ext_resource type="Script" path="res://entity/player/player.gd" id="1_i0yfj"]
 [ext_resource type="PackedScene" uid="uid://csn7o3okp8ar3" path="res://entity/entity_base.tscn" id="1_ugjhg"]
@@ -7,8 +7,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a170m"]
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etkq5"]
+size = Vector2(32, 32)
+
 [node name="Player" instance=ExtResource("1_ugjhg")]
 position = Vector2(46, 13)
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_i0yfj")
 speed = 450.0
 
@@ -21,3 +26,12 @@ shape = SubResource("RectangleShape2D_a170m")
 [node name="AttackTimer" type="Timer" parent="." index="2"]
 wait_time = 0.2
 one_shot = true
+
+[node name="Hurtbox" parent="." index="3"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource("RectangleShape2D_etkq5")
+
+[editable path="Hurtbox"]

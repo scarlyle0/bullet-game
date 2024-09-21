@@ -6,3 +6,11 @@ res://entity_base/entity_base.tscn
 res://entity_base/entity_base.gd
 res://player/player.gd
 res://entity/entity_base.gd
+res://projectile/projectile.gd
+res://entity/player/player.tscn
+res://entity/player/player.gd
+res://overlap/hurtbox.tscn
+res://overlap/hitbox.tscn
+res://overlap/hitbox.gd
+res://entity/entity_base.tscn
+res://entity/enemy/enemy_base.tscn
