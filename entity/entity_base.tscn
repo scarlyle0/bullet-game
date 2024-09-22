@@ -12,6 +12,7 @@ script = ExtResource("1_0cgqa")
 
 [node name="Hurtbox" parent="." instance=ExtResource("2_37mju")]
 
+[connection signal="died" from="." to="." method="_on_died"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
