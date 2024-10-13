@@ -6,8 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ta4vb"]
 radius = 16.0
 
-[node name="projectile" type="Area2D"]
+[node name="projectile" type="Area2D" groups=["projectile"]]
 scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 5
 script = ExtResource("1_g8jdf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

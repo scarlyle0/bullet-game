@@ -1,6 +1,8 @@
 extends Area2D
 
-var speed = 1000  # Speed of the bullet
+@export var speed = 1000  # Speed of the bullet
+
+@export var damage: int = 10
 
 func _ready():
 	pass

@@ -29,6 +29,10 @@ signal died
 @onready var collShape = $CollisionShape2D
 @onready var hurtbox = $hurtbox
 
+@export var EFFECT_HIT: PackedScene = null
+@export var EFFECT_DIED: PackedScene = null
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -42,6 +46,7 @@ func move():
 	move_and_slide()
 
 func death():
+	spawn_effect(EFFECT_DIED)
 	queue_free()
 
 func recieve_damage(base_damage: int):
@@ -53,7 +58,17 @@ func recieve_damage(base_damage: int):
 	
 func _on_hurtbox_area_entered(hitbox):
 	recieve_damage(hitbox.damage)
+	if hitbox.is_in_group("projectile"):
+		hitbox.destroy()
+		
+	spawn_effect(EFFECT_HIT)
 
 
 func _on_died():
 	death()
+
+func spawn_effect(EFFECT: PackedScene, effect_position: Vector2 = global_position):
+	if EFFECT:
+		var effect = EFFECT.instantiate()
+		get_tree().current_scene.add_child(effect)
+		effect.global_position = effect_position

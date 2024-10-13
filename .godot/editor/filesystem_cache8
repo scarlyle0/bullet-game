@@ -1,19 +1,54 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727038828
+::res://::1728803490
 icon.svg::CompressedTexture2D::5179395350330205634::1726948660::1726948680::1::::<><>::
-main.tscn::PackedScene::2580224723811770550::1726958105::0::1::::<><>::uid://cf6jj0yyrnw3g::::res://entity/player/player.tscn<>uid://gkew6c0ghykk::::res://entity/enemy/enemy_base.tscn
-::res://entity/::1726958141
-entity_base.gd::GDScript::-1::1726958141::0::1::::<>CharacterBody2D<>::
-entity_base.tscn::PackedScene::6065046901313520278::1726958141::0::1::::<><>::res://entity/entity_base.gd<>uid://xr4b34q1r1k5::::res://overlap/hurtbox.tscn
-::res://entity/enemy/::1726958093
-enemy_base.tscn::PackedScene::442060627263435766::1726958093::0::1::::<><>::uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://c2f4k2ut2t7e2::::res://placeholder/Rhombus/Rhombus-0003.png<>uid://dbu5x7tg4rhi8::::res://overlap/hitbox.tscn
-::res://entity/player/::1726958093
-player.gd::GDScript::-1::1726953234::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5188345172305024142::1726958093::0::1::::<><>::res://entity/player/player.gd<>uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://b1pmfd2qgvswm::::res://placeholder/Square/Square-0001.png
-::res://overlap/::1726958093
+main.tscn::PackedScene::2580224723811770550::1728186423::0::1::::<><>::uid://cf6jj0yyrnw3g::::res://entity/player/player.tscn<>uid://gkew6c0ghykk::::res://entity/enemy/enemy_base.tscn
+::res://Dungeon Crawler Pack/::1728446676
+full spritesheet.png::CompressedTexture2D::2984028532088118752::1623754654::1728446676::1::::<><>::
+full tilemap.png::CompressedTexture2D::1414307543352511671::1623754654::1728446676::1::::<><>::
+::res://Dungeon Crawler Pack/effects (new)/::1728446676
+enemy_afterdead_explosion_anim_spritesheet.png::CompressedTexture2D::5143179732727675846::1623754654::1728446676::1::::<><>::
+hit_effect_anim_spritesheet.png::CompressedTexture2D::8832754882520818195::1623754654::1728446676::1::::<><>::
+::res://Dungeon Crawler Pack/enemies/::1728446673
+::res://Dungeon Crawler Pack/enemies/flying creature/::1728446676
+fly_anim_f0.png::CompressedTexture2D::3194422726291505365::1623754654::1728446676::1::::<><>::
+fly_anim_f1.png::CompressedTexture2D::1477392699279215907::1623754654::1728446676::1::::<><>::
+fly_anim_f2.png::CompressedTexture2D::6032260549740688526::1623754654::1728446676::1::::<><>::
+fly_anim_f3.png::CompressedTexture2D::2383405509607749871::1623754654::1728446676::1::::<><>::
+fly_anim_spritesheet.png::CompressedTexture2D::3056076507869005121::1623754654::1728446676::1::::<><>::
+::res://Dungeon Crawler Pack/heroes/::1728446673
+::res://Dungeon Crawler Pack/heroes/knight/::1728446676
+knight_idle_anim_f0.png::CompressedTexture2D::6667887413981738834::1623754654::1728446676::1::::<><>::
+knight_idle_anim_f1.png::CompressedTexture2D::8224337532425955179::1623754654::1728446676::1::::<><>::
+knight_idle_anim_f2.png::CompressedTexture2D::778659416464207895::1623754654::1728446676::1::::<><>::
+knight_idle_anim_f3.png::CompressedTexture2D::1631434543552476642::1623754654::1728446676::1::::<><>::
+knight_idle_anim_f4.png::CompressedTexture2D::8485655125634425597::1623754654::1728446676::1::::<><>::
+knight_idle_anim_f5.png::CompressedTexture2D::1891257323726626222::1623754654::1728446676::1::::<><>::
+knight_idle_spritesheet.png::CompressedTexture2D::6634897701529470821::1623754654::1728446676::1::::<><>::
+knight_run_anim_f0.png::CompressedTexture2D::8668857059851626233::1623754654::1728446676::1::::<><>::
+knight_run_anim_f1.png::CompressedTexture2D::2943731298667932542::1623754654::1728446676::1::::<><>::
+knight_run_anim_f2.png::CompressedTexture2D::5235886532641059316::1623754654::1728446676::1::::<><>::
+knight_run_anim_f3.png::CompressedTexture2D::5236998722296581766::1623754654::1728446676::1::::<><>::
+knight_run_anim_f4.png::CompressedTexture2D::6594142662897944682::1623754654::1728446676::1::::<><>::
+knight_run_anim_f5.png::CompressedTexture2D::5543407097205872907::1623754654::1728446676::1::::<><>::
+knight_run_spritesheet.png::CompressedTexture2D::6607154773026958583::1623754654::1728446676::1::::<><>::
+weapon_sword_1.png::CompressedTexture2D::5337741410226365747::1623754654::1728446676::1::::<><>::
+::res://Dungeon Crawler Pack/ui (new)/::1728446676
+health_ui.png::CompressedTexture2D::8013188044204884465::1623754654::1728446676::1::::<><>::
+::res://effects/::1728448681
+death_effect.tscn::PackedScene::1711991367536653991::1728448670::0::1::::<><>::
+hit_effect.tscn::PackedScene::6606259879189107663::1728448681::0::1::::<><>::uid://dx3wgg5moqhxj::::res://Dungeon Crawler Pack/effects (new)/hit_effect_anim_spritesheet.png
+::res://entity/::1728705673
+entity_base.gd::GDScript::-1::1728705673::0::1::::<>CharacterBody2D<>::
+entity_base.tscn::PackedScene::6065046901313520278::1728705673::0::1::::<><>::res://entity/entity_base.gd<>uid://xr4b34q1r1k5::::res://overlap/hurtbox.tscn
+::res://entity/enemy/::1728186423
+enemy_base.tscn::PackedScene::442060627263435766::1728186423::0::1::::<><>::uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://c2f4k2ut2t7e2::::res://placeholder/Rhombus/Rhombus-0003.png<>uid://dbu5x7tg4rhi8::::res://overlap/hitbox.tscn
+::res://entity/player/::1728186431
+player.gd::GDScript::-1::1728186422::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::5188345172305024142::1728186431::0::1::::<><>::res://entity/player/player.gd<>uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://b1pmfd2qgvswm::::res://placeholder/Square/Square-0001.png
+::res://overlap/::1728186423
 hitbox.gd::GDScript::-1::1726956180::0::1::::<>Area2D<>::
-hitbox.tscn::PackedScene::7272602743251868965::1726958093::0::1::::<><>::res://overlap/hitbox.gd
-hurtbox.tscn::PackedScene::1651201920293435586::1726958093::0::1::::<><>::
+hitbox.tscn::PackedScene::7272602743251868965::1728186423::0::1::::<><>::res://overlap/hitbox.gd
+hurtbox.tscn::PackedScene::1651201920293435586::1728186423::0::1::::<><>::
 ::res://placeholder/::1726948660
 README.md::TextFile::-1::1726948660::0::1::::<><>::
 ::res://placeholder/Circle/::1726948680
@@ -56,6 +91,6 @@ Triangle-0004.png::CompressedTexture2D::882567620995733346::1726948660::17269486
 Triangle-0005.png::CompressedTexture2D::8722286032017425279::1726948660::1726948680::1::::<><>::
 Triangle-0006.png::CompressedTexture2D::5092963464212926139::1726948660::1726948680::1::::<><>::
 Triangle-0007.png::CompressedTexture2D::8947966011502784828::1726948660::1726948680::1::::<><>::
-::res://projectile/::1726953235
-projectile.gd::GDScript::-1::1726949002::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::4486300036259059800::1726953235::0::1::::<><>::uid://b2lm8wxacnpfa::::res://placeholder/Circle/Circle-0002.png<>res://projectile/projectile.gd
+::res://projectile/::1728186423
+projectile.gd::GDScript::-1::1727150732::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::4486300036259059800::1728186423::0::1::::<><>::uid://b2lm8wxacnpfa::::res://placeholder/Circle/Circle-0002.png<>res://projectile/projectile.gd

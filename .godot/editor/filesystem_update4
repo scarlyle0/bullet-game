@@ -1,6 +1,6 @@
-res://entity/enemy/enemy_base.tscn
+res://entity/entity_base.tscn
 res://entity/entity_base.gd
 res://main.tscn
-res://entity/player/player.gd
 res://entity/player/player.tscn
-res://entity/entity_base.tscn
+res://effects/hit_effect.tscn
+res://effects/death_effect.tscn
