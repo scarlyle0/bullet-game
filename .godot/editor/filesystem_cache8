@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728803490
+::res://::1729135781
 icon.svg::CompressedTexture2D::5179395350330205634::1726948660::1726948680::1::::<><>::
-main.tscn::PackedScene::2580224723811770550::1728186423::0::1::::<><>::uid://cf6jj0yyrnw3g::::res://entity/player/player.tscn<>uid://gkew6c0ghykk::::res://entity/enemy/enemy_base.tscn
+main.tscn::PackedScene::2580224723811770550::1728979238::0::1::::<><>::uid://cf6jj0yyrnw3g::::res://entity/player/player.tscn<>uid://gkew6c0ghykk::::res://entity/enemy/enemy_base.tscn
 ::res://Dungeon Crawler Pack/::1728446676
 full spritesheet.png::CompressedTexture2D::2984028532088118752::1623754654::1728446676::1::::<><>::
 full tilemap.png::CompressedTexture2D::1414307543352511671::1623754654::1728446676::1::::<><>::
@@ -32,19 +32,22 @@ knight_run_anim_f4.png::CompressedTexture2D::6594142662897944682::1623754654::17
 knight_run_anim_f5.png::CompressedTexture2D::5543407097205872907::1623754654::1728446676::1::::<><>::
 knight_run_spritesheet.png::CompressedTexture2D::6607154773026958583::1623754654::1728446676::1::::<><>::
 weapon_sword_1.png::CompressedTexture2D::5337741410226365747::1623754654::1728446676::1::::<><>::
-::res://Dungeon Crawler Pack/ui (new)/::1728446676
+::res://Dungeon Crawler Pack/ui (new)/::1729142204
+healthbar_border.png::CompressedTexture2D::886798590391028389::1623754654::1729142207::1::::<><>::
+healthbar_empty.png::CompressedTexture2D::5718991975455114932::1623754654::1729142207::1::::<><>::
+healthbar_full.png::CompressedTexture2D::220602659955584205::1623754654::1729142207::1::::<><>::
 health_ui.png::CompressedTexture2D::8013188044204884465::1623754654::1728446676::1::::<><>::
-::res://effects/::1728448681
-death_effect.tscn::PackedScene::1711991367536653991::1728448670::0::1::::<><>::
-hit_effect.tscn::PackedScene::6606259879189107663::1728448681::0::1::::<><>::uid://dx3wgg5moqhxj::::res://Dungeon Crawler Pack/effects (new)/hit_effect_anim_spritesheet.png
-::res://entity/::1728705673
-entity_base.gd::GDScript::-1::1728705673::0::1::::<>CharacterBody2D<>::
-entity_base.tscn::PackedScene::6065046901313520278::1728705673::0::1::::<><>::res://entity/entity_base.gd<>uid://xr4b34q1r1k5::::res://overlap/hurtbox.tscn
+::res://effects/::1728979238
+death_effect.tscn::PackedScene::1711991367536653991::1728979238::0::1::::<><>::
+hit_effect.tscn::PackedScene::6606259879189107663::1728979238::0::1::::<><>::uid://dx3wgg5moqhxj::::res://Dungeon Crawler Pack/effects (new)/hit_effect_anim_spritesheet.png
+::res://entity/::1728979287
+entity_base.gd::GDScript::-1::1728979236::0::1::::<>CharacterBody2D<>::
+entity_base.tscn::PackedScene::6065046901313520278::1728979287::0::1::::<><>::res://entity/entity_base.gd<>uid://xr4b34q1r1k5::::res://overlap/hurtbox.tscn<>uid://c1eeeuc75m2xv::::res://effects/hit_effect.tscn<>uid://ynkiolsdph4j::::res://effects/death_effect.tscn
 ::res://entity/enemy/::1728186423
 enemy_base.tscn::PackedScene::442060627263435766::1728186423::0::1::::<><>::uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://c2f4k2ut2t7e2::::res://placeholder/Rhombus/Rhombus-0003.png<>uid://dbu5x7tg4rhi8::::res://overlap/hitbox.tscn
-::res://entity/player/::1728186431
+::res://entity/player/::1728979238
 player.gd::GDScript::-1::1728186422::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5188345172305024142::1728186431::0::1::::<><>::res://entity/player/player.gd<>uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://b1pmfd2qgvswm::::res://placeholder/Square/Square-0001.png
+player.tscn::PackedScene::5188345172305024142::1728979238::0::1::::<><>::res://entity/player/player.gd<>uid://csn7o3okp8ar3::::res://entity/entity_base.tscn<>uid://b1pmfd2qgvswm::::res://placeholder/Square/Square-0001.png
 ::res://overlap/::1728186423
 hitbox.gd::GDScript::-1::1726956180::0::1::::<>Area2D<>::
 hitbox.tscn::PackedScene::7272602743251868965::1728186423::0::1::::<><>::res://overlap/hitbox.gd
@@ -94,3 +97,7 @@ Triangle-0007.png::CompressedTexture2D::8947966011502784828::1726948660::1726948
 ::res://projectile/::1728186423
 projectile.gd::GDScript::-1::1727150732::0::1::::<>Area2D<>::
 projectile.tscn::PackedScene::4486300036259059800::1728186423::0::1::::<><>::uid://b2lm8wxacnpfa::::res://placeholder/Circle/Circle-0002.png<>res://projectile/projectile.gd
+::res://UI/::1729136499
+damage_indicator.gd::GDScript::-1::1728978885::0::1::::<>Node2D<>::
+damage_indicator.tscn::PackedScene::3391044367548419837::1728979238::0::1::::<><>::res://UI/damage_indicator.gd
+entity_health_bar.tscn::PackedScene::1554032516530385316::1729136499::0::1::::<><>::

@@ -1,6 +1,8 @@
+res://UI/entity_health_bar.tscn
 res://entity/entity_base.tscn
 res://entity/entity_base.gd
 res://main.tscn
 res://entity/player/player.tscn
-res://effects/hit_effect.tscn
 res://effects/death_effect.tscn
+res://effects/hit_effect.tscn
+res://UI/damage_indicator.tscn

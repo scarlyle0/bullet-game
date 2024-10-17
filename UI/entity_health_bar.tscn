@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://we1xn52xne4c"]
+
+[ext_resource type="Texture2D" uid="uid://cnqk7ynqfkkfc" path="res://Dungeon Crawler Pack/ui (new)/healthbar_empty.png" id="1_jv34t"]
+[ext_resource type="Texture2D" uid="uid://mvtpcml8afmj" path="res://Dungeon Crawler Pack/ui (new)/healthbar_border.png" id="2_lgqpu"]
+[ext_resource type="Texture2D" uid="uid://de4j8m3hdd62" path="res://Dungeon Crawler Pack/ui (new)/healthbar_full.png" id="3_c0h1c"]
+[ext_resource type="Script" path="res://UI/entity_health_bar.gd" id="4_ne35a"]
+
+[node name="EntityHealthBar" type="TextureProgressBar" groups=["healthbar"]]
+offset_left = -11.0
+offset_top = -27.0
+offset_right = 29.0
+offset_bottom = 13.0
+scale = Vector2(0.7, 0.7)
+texture_under = ExtResource("1_jv34t")
+texture_over = ExtResource("2_lgqpu")
+texture_progress = ExtResource("3_c0h1c")
+script = ExtResource("4_ne35a")

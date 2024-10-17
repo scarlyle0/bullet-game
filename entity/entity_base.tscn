@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://csn7o3okp8ar3"]
+[gd_scene load_steps=6 format=3 uid="uid://csn7o3okp8ar3"]
 
 [ext_resource type="Script" path="res://entity/entity_base.gd" id="1_0cgqa"]
 [ext_resource type="PackedScene" uid="uid://xr4b34q1r1k5" path="res://overlap/hurtbox.tscn" id="2_37mju"]
 [ext_resource type="PackedScene" uid="uid://c1eeeuc75m2xv" path="res://effects/hit_effect.tscn" id="2_a4re5"]
 [ext_resource type="PackedScene" uid="uid://ynkiolsdph4j" path="res://effects/death_effect.tscn" id="3_q3ro7"]
+[ext_resource type="PackedScene" uid="uid://we1xn52xne4c" path="res://UI/entity_health_bar.tscn" id="5_i8xms"]
 
 [node name="EntityBase" type="CharacterBody2D"]
 script = ExtResource("1_0cgqa")
@@ -15,6 +16,9 @@ EFFECT_DIED = ExtResource("3_q3ro7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Hurtbox" parent="." instance=ExtResource("2_37mju")]
+
+[node name="EntityHealthBar" parent="." instance=ExtResource("5_i8xms")]
+visible = false
 
 [connection signal="died" from="." to="." method="_on_died"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
