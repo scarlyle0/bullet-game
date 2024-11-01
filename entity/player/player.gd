@@ -6,6 +6,8 @@ var BULLET = preload("res://projectile/projectile.tscn")
 
 @export var speed: float = 450.0
 
+@export var rotation_speed := 2 # Adjust this for faster/slower rotation
+
 
 func _ready():
 	pass # Replace with function body.
@@ -15,6 +17,15 @@ func _process(delta):
 	if Input.is_action_pressed("action_attack") and attackTimer.is_stopped():
 		var bullet_direction = self.position.direction_to(get_global_mouse_position())
 		shoot(bullet_direction)
+	
+	# Rotate left when Q is pressed
+	if Input.is_action_pressed("rotate_left"):
+		rotation -= rotation_speed * delta
+
+	# Rotate right when E is pressed
+	if Input.is_action_pressed("rotate_right"):
+		rotation += rotation_speed * delta
+
 
 func shoot(bullet_direction : Vector2):
 	if BULLET:
@@ -30,7 +41,9 @@ func shoot(bullet_direction : Vector2):
 
 func get_input():
 	var input_dir = Input.get_vector("left", "right", "up", "down")
-	velocity = input_dir * speed
+	# Calculate the movement direction based on the rotation
+	var movement_direction = Vector2(input_dir.x, input_dir.y).rotated(rotation)
+	velocity = movement_direction.normalized() * speed
 
 func move_control():
 	get_input()
