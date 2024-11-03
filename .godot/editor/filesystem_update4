@@ -1,9 +1,10 @@
+res://levels/menu.tscn
 res://main.tscn
-res://entity/player/player.tscn
-res://entity/entity_base.tscn
-res://camera_2d.gd
-res://entity/player/player.gd
-res://entity/entity_base.gd
 res://entity/enemy/enemy_base.tscn
-res://entity/enemy/enemy_base.gd
+res://entity/entity_base.tscn
 res://UI/entity_health_bar.tscn
+res://entity/enemy/boss1.tscn
+res://overlap/hitbox.tscn
+res://components/health_component.tscn
+res://components/health_component.gd
+res://entity/entity_base.gd

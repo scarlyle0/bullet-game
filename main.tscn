@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc046on08mnja"]
+[gd_scene load_steps=6 format=3 uid="uid://bc046on08mnja"]
 
 [ext_resource type="PackedScene" uid="uid://cf6jj0yyrnw3g" path="res://entity/player/player.tscn" id="1_p3tj6"]
 [ext_resource type="PackedScene" uid="uid://gkew6c0ghykk" path="res://entity/enemy/enemy_base.tscn" id="2_i1c83"]
 [ext_resource type="PackedScene" uid="uid://c1eeeuc75m2xv" path="res://effects/hit_effect.tscn" id="3_v3g2a"]
 [ext_resource type="PackedScene" uid="uid://ynkiolsdph4j" path="res://effects/death_effect.tscn" id="4_ccduf"]
+[ext_resource type="PackedScene" uid="uid://ywsm7nggjden" path="res://entity/enemy/boss1.tscn" id="5_3d5ri"]
 
 [node name="Main" type="Node"]
 
@@ -19,6 +20,9 @@ position_smoothing_enabled = true
 position_smoothing_speed = 75.0
 
 [node name="EnemyBase" parent="." instance=ExtResource("2_i1c83")]
-position = Vector2(73, 71)
+position = Vector2(76, 66)
 EFFECT_HIT = ExtResource("3_v3g2a")
 EFFECT_DIED = ExtResource("4_ccduf")
+
+[node name="Boss1" parent="." instance=ExtResource("5_3d5ri")]
+position = Vector2(140, 209)

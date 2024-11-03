@@ -1,6 +1,9 @@
+Node
+CollisionShape2D
+Sprite2D
+CharacterBody2D
 Camera2D
 SubViewportContainer
-Sprite2D
 Node3D
 Camera3D
 SubViewport
@@ -9,7 +12,3 @@ VBoxContainer
 MarginContainer
 TextureProgressBar
 AnimationPlayer
-Label
-CollisionShape2D
-Area2D
-Timer
