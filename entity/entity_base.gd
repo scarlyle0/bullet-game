@@ -31,8 +31,6 @@ const INDICATOR_DAMAGE = preload("res://UI/damage_indicator.tscn")
 
 @export var SPEED: int = 75
 
-@onready var sprite = $Sprite2D
-@onready var collShape = $CollisionShape2D
 @onready var healthBar = $EntityHealthBar
 
 @export var EFFECT_HIT: PackedScene = null

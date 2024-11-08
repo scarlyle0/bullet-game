@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ovny3mf310n"]
+[gd_scene load_steps=5 format=3 uid="uid://1ovny3mf310n"]
 
 [ext_resource type="Script" path="res://components/health_component.gd" id="1_i3ckb"]
+[ext_resource type="PackedScene" uid="uid://c1eeeuc75m2xv" path="res://effects/hit_effect.tscn" id="2_a0tdq"]
+[ext_resource type="PackedScene" uid="uid://we1xn52xne4c" path="res://UI/entity_health_bar.tscn" id="2_pvjpe"]
+[ext_resource type="PackedScene" uid="uid://ynkiolsdph4j" path="res://effects/death_effect.tscn" id="3_51ew0"]
 
-[node name="HealthComponent" type="Node"]
+[node name="HealthComponent" type="Node2D"]
 script = ExtResource("1_i3ckb")
+EFFECT_HIT = ExtResource("2_a0tdq")
+EFFECT_DIED = ExtResource("3_51ew0")
+
+[node name="EntityHealthBar" parent="." instance=ExtResource("2_pvjpe")]
+visible = false
+offset_top = -76.0
+offset_bottom = -36.0
+
+[connection signal="died" from="." to="." method="_on_died"]

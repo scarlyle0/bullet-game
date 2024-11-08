@@ -16,7 +16,6 @@ defense = 5
 ignore_rotation = false
 zoom = Vector2(1.25, 1.25)
 limit_smoothed = true
-position_smoothing_enabled = true
 position_smoothing_speed = 75.0
 
 [node name="EnemyBase" parent="." instance=ExtResource("2_i1c83")]

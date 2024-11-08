@@ -1,6 +1,10 @@
-Node
+Node2D
+VideoStreamPlayer
 CollisionShape2D
+Area2D
+Label
 Sprite2D
+Node
 CharacterBody2D
 Camera2D
 SubViewportContainer
@@ -8,7 +12,3 @@ Node3D
 Camera3D
 SubViewport
 Button
-VBoxContainer
-MarginContainer
-TextureProgressBar
-AnimationPlayer

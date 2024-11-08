@@ -1,4 +1,4 @@
-extends "res://entity/entity_base.gd"
+extends CharacterBody2D
 
 @onready var player = get_node("../Player")
 

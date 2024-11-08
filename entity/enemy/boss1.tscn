@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ywsm7nggjden"]
+[gd_scene load_steps=12 format=3 uid="uid://ywsm7nggjden"]
 
 [ext_resource type="Texture2D" uid="uid://c56rejtjygvb5" path="res://placeholder/Square/Square-0005.png" id="1_ivljg"]
 [ext_resource type="PackedScene" uid="uid://dbu5x7tg4rhi8" path="res://overlap/hitbox.tscn" id="1_pyv42"]
+[ext_resource type="Script" path="res://entity/enemy/boss_1.gd" id="1_x5qur"]
 [ext_resource type="PackedScene" uid="uid://xr4b34q1r1k5" path="res://overlap/hurtbox.tscn" id="2_ve1rd"]
+[ext_resource type="PackedScene" uid="uid://1ovny3mf310n" path="res://components/health_component.tscn" id="4_wbeio"]
+[ext_resource type="Texture2D" uid="uid://b2lm8wxacnpfa" path="res://placeholder/Circle/Circle-0002.png" id="5_4rjxe"]
+[ext_resource type="Script" path="res://entity/enemy/state.gd" id="7_7etm8"]
+[ext_resource type="Script" path="res://entity/enemy/finite_state_machine.gd" id="7_ocvm4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cv7tp"]
 size = Vector2(96, 96)
@@ -10,13 +15,17 @@ size = Vector2(96, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrtob"]
 size = Vector2(96, 96)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fap6a"]
+radius = 155.029
+
 [node name="Boss1" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_x5qur")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
 texture = ExtResource("1_ivljg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Hitbox" parent="." instance=ExtResource("1_pyv42")]
 collision_layer = 4
@@ -33,6 +42,50 @@ monitorable = false
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 shape = SubResource("RectangleShape2D_yrtob")
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_wbeio")]
+position = Vector2(0, -1)
+
+[node name="AttackPivot" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="AttackPivot"]
+position = Vector2(159, 0)
+scale = Vector2(10, 0.25)
+texture = ExtResource("5_4rjxe")
+
+[node name="debug" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -76.0
+offset_right = 24.0
+offset_bottom = -53.0
+text = "debug"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_fap6a")
+
+[node name="FiniteStateMachine" type="Node2D" parent="."]
+script = ExtResource("7_ocvm4")
+
+[node name="Idle" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
+
+[node name="Follow" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
+
+[node name="Missile" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
+
+[node name="Laser" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
+
+[node name="Dash" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
+
+[node name="Death" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("7_7etm8")
 
 [editable path="Hitbox"]
 [editable path="Hurtbox"]
